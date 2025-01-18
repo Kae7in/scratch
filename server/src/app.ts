@@ -27,8 +27,6 @@ import { cookieName } from "./libs/utils.js";
 import sensible from "./plugins/sensible.js";
 import Root from "./routes/root.js";
 import HealthRoutes from "./routes/health/index.js";
-import NotesRoutes from "./routes/notes/index.js";
-import AiRoutes from "./routes/ai/index.js";
 
 dotenv.config({ path: `.env.local` });
 
@@ -56,8 +54,8 @@ const build: FastifyPluginAsync<AppOptions> = async (
     openapi: {
       openapi: "3.1.0",
       info: {
-        title: "WildNotes AI Server",
-        summary: "API for the WildNotes AI server.",
+        title: "Scratch Server",
+        summary: "API for the Scratch server.",
         description: "All hail our mighty monolith!",
         version: "0.0.1",
       },
@@ -99,8 +97,6 @@ const build: FastifyPluginAsync<AppOptions> = async (
 
   fastify.register(Root);
   fastify.register(HealthRoutes, { prefix: "/health" });
-  fastify.register(NotesRoutes, { prefix: "/notes" });
-  fastify.register(AiRoutes, { prefix: "/ai" });
 
   fastify.setNotFoundHandler((request, reply) => {
     reply.header("Access-Control-Allow-Origin", [CLIENT_ORIGIN]);
