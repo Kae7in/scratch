@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+    "target": "es6",
+    "esModuleInterop": true,
+    "lib": [
+      "esnext"
+    ],
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+    }
+  }
+}
