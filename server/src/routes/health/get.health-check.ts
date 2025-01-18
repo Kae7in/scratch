@@ -22,7 +22,6 @@ const GetHealthCheck: FastifyPluginAsync = async (
       },
     },
     async function (request, reply) {
-
       return reply.send({
         status: "ok",
         timestamp: new Date().toISOString(),

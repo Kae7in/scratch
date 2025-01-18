@@ -17,7 +17,7 @@ const Root: FastifyPluginAsync = async (fastify): Promise<void> => {
  ██║  ██╗██║  ██║███████╗███████╗██║██║ ╚████║
  ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝
                                   
- Made by Recess.
+ Made by Kaelin.
  
  © ${new Date().getFullYear()} Kaelin.
     `;

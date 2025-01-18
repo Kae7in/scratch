@@ -1,9 +1,7 @@
-
 import { FastifyInstance } from "fastify";
 
 declare module "fastify" {
-  export interface FastifyInstance {
-  }
+  export interface FastifyInstance {}
 
   interface FastifyRequest {
     onboardingSessionId?: string;
@@ -16,6 +14,5 @@ declare module "fastify" {
 }
 
 declare module "@fastify/jwt" {
-  interface FastifyJWT {
-  }
+  interface FastifyJWT {}
 }

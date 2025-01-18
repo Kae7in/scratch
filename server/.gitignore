@@ -64,3 +64,4 @@ test/types/index.js
 dist
 .vercel
 .env*.local
+.env

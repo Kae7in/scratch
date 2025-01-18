@@ -25,10 +25,10 @@ import {
 import { envToLogger } from "./libs/logger.js";
 import { cookieName } from "./libs/utils.js";
 import sensible from "./plugins/sensible.js";
-import Root from "./routes/root.js";
 import HealthRoutes from "./routes/health/index.js";
+import Root from "./routes/root.js";
 
-dotenv.config({ path: `.env.local` });
+dotenv.config({ path: `.env` });
 
 export type AppOptions = {
   // Place your custom options for app below here.

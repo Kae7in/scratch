@@ -1,4 +1,4 @@
-# Recess API Routes
+# Scratch API Routes
 
 ### Rules for Creating Routes
 

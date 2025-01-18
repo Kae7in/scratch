@@ -12,16 +12,16 @@ See the config in `api-client.ts`.
 ## Basic Queries
 
 ```javascript
-const res = await client.PATCH("/admin/cohorts/{id}/", {
-  params: {
-    path: {
-      id: seriesId,
-    },
-    query: {
-      status: "ACTIVE",
-    },
-  },
-  body: payload,
+const res = await client.PATCH('/admin/cohorts/{id}/', {
+	params: {
+		path: {
+			id: seriesId
+		},
+		query: {
+			status: 'ACTIVE'
+		}
+	},
+	body: payload
 });
 const data = res.data; // can be undefined
 ```
@@ -31,12 +31,12 @@ const data = res.data; // can be undefined
 ### Query
 
 ```javascript
-import { createQuery } from "@tanstack/svelte-query";
-import { client } from "$lib/api-client";
+import { createQuery } from '@tanstack/svelte-query';
+import { client } from '$lib/api-client';
 
 $: userQuery = createQuery({
-  queryKey: ["/user/@me"],
-  queryFn: async () => (await client.GET("/user/@me")).data,
+	queryKey: ['/user/@me'],
+	queryFn: async () => (await client.GET('/user/@me')).data
 });
 ```
 
@@ -109,7 +109,7 @@ type View = paths["/activity/{activityId}/views/"]["get"]["responses"][200]["con
 
 ```javascript
 // If you're getting a "Property does not exist" error, you might need to wrap nullable parts of the response schema in NonNullable
-type RecessEvent = NonNullable<
-    paths["/recess/"]["get"]["responses"][200]["content"]["application/json"]["recess"]
+type ScratchEvent = NonNullable<
+    paths["/scratch/"]["get"]["responses"][200]["content"]["application/json"]["scratch"]
   >["events"][number];
 ```

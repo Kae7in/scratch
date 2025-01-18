@@ -1,7 +1,7 @@
 import { CookieSerializeOptions } from "@fastify/cookie";
 import dotenv from "dotenv";
 
-dotenv.config({ path: `.env.local` });
+dotenv.config({ path: `.env` });
 
 export const NODE_ENV = process.env.NODE_ENV as
   | "development"
@@ -31,6 +31,4 @@ export const COOKIE_OPTIONS: CookieSerializeOptions = {
   }),
 };
 
-export const TRUSTED_DOMAINS = [
-  "your-domain.com"
-];
+export const TRUSTED_DOMAINS = ["your-domain.com"];

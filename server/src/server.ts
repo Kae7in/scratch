@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { app as server } from "./app.js";
 import { loggerPlugin } from "./plugins/logger.js";
 
-dotenv.config({ path: `.env.local` });
+dotenv.config({ path: `.env` });
 
 if (process.env.NODE_ENV !== "development") {
   server.register(loggerPlugin);

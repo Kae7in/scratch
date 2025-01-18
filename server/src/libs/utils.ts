@@ -1,10 +1,10 @@
 import dotenv from "dotenv";
 import { DateTime } from "luxon";
 
-dotenv.config({ path: `.env.local` });
+dotenv.config({ path: `.env` });
 
 export const cookieName = (key: string) => {
-  return `${process.env.COOKIE_DOMAIN ? "__Secure-" : ""}recess.${key}`;
+  return `${process.env.COOKIE_DOMAIN ? "__Secure-" : ""}scratch.${key}`;
 };
 
 export const isValidUUID = (uuid: string) => {

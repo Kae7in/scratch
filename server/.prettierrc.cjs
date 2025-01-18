@@ -9,7 +9,7 @@ module.exports = {
   importOrder: [
     "<THIRD_PARTY_MODULES>",
     "",
-    "^@tryrecess/(.*)$",
+    "^@scratch/(.*)$",
     "^@/types/(.*)$",
     "^@/plugins/(.*)$",
     "^@/routes/(.*)$",

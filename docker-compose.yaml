@@ -1,0 +1,24 @@
+services:
+  db:
+    image: "postgres:latest"
+    container_name: "repostgres"
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "scratch"
+    ports:
+      - "5432:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+  test-db:
+    image: "postgres:latest"
+    container_name: "test-postgres"
+    environment:
+      POSTGRES_PASSWORD: "test-postgres"
+      POSTGRES_DB: "test-scratch"
+    ports:
+      - "5433:5432"
+    volumes:
+      - test-dbdata:/var/lib/postgresql/data
+volumes:
+  dbdata:
+  test-dbdata:
