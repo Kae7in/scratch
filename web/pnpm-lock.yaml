@@ -61,7 +61,7 @@ importers:
         specifier: ^0.6.10
         version: 0.6.10(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.4.2))(prettier-plugin-svelte@3.3.3(prettier@3.4.2)(svelte@5.19.0))(prettier@3.4.2)
       svelte:
-        specifier: ^5.0.0
+        specifier: ^5.19.0
         version: 5.19.0
       svelte-check:
         specifier: ^4.0.0

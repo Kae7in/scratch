@@ -106,6 +106,20 @@ const build: FastifyPluginAsync<AppOptions> = async (
       route: request.url,
     });
   });
+
+  fastify.setErrorHandler((error, request, reply) => {
+    // Ignore 400 series errors
+    if (error.statusCode && error.statusCode >= 400 && error.statusCode < 500) {
+      return reply.send(error);
+    }
+
+    console.error("Server error:", error);
+    reply.status(error.statusCode || 500).send({
+      error: "Server Error",
+      message: error.message || "An unknown error occurred",
+      statusCode: error.statusCode || 500,
+    });
+  });
 };
 
 const app = fastify({
